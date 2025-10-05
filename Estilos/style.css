@@ -88,7 +88,7 @@ main {
 }
 
 .about-story .story-content {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
     text-align: center;
     padding: 0 1rem;
@@ -96,7 +96,7 @@ main {
 
 .about-story h2 {
     font-size: 2rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
     color: #333;
 }
 
@@ -105,6 +105,37 @@ main {
     line-height: 1.8;
     color: #666;
     margin-bottom: 1rem;
+}
+
+.artisan-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    text-align: left;
+}
+
+.artisan-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.artisan-details h3 {
+    font-size: 1.6rem;
+    color: #333;
+    margin: 0 0 0.5rem 0;
+}
+
+.artisan-title {
+    color: gold;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    font-style: italic;
 }
 
 /* Sección de Bloques de Valor Único */
@@ -333,13 +364,25 @@ footer {
         padding: 1rem;
     }
     
+    .logo-container {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .logo {
+        height: 50px;
+    }
+    
     nav ul {
         gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
     }
     
     .wishlist-container {
         text-align: center;
         margin-top: 1rem;
+        width: 100%;
     }
     
     .social-links {
@@ -350,5 +393,48 @@ footer {
     
     .social-link {
         width: 60%;
+    }
+    
+    /* Responsive para la sección de historia */
+    .artisan-info {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .artisan-image {
+        width: 150px;
+        height: 150px;
+    }
+    
+    /* Responsive para los pilares */
+    .pilares-grid {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
+    
+    .pilar {
+        margin: 0.5rem 0;
+    }
+    
+    /* Hero section */
+    .hero {
+        padding: 2rem 1rem;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    /* Contact page */
+    .contact-content {
+        padding: 0 1rem;
+    }
+    
+    .whatsapp-form textarea {
+        min-height: 100px;
     }
 }
