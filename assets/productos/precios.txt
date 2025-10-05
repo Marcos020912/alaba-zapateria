@@ -1,29 +1,29 @@
-abarcas blancas  2500 CUP
+abarcas blancas  2500 CUP  mujer
 
-sandalias doble hebilla  2500 CUP
+sandalias doble hebilla  2500 CUP  mujer
 
-abarcas negra  2500 CUP 
+abarcas negra  2500 CUP  mujer 
 
-zandalia talonada  3000 CUP
+zandalia talonada  3000 CUP  mujer
 
-nauticos azules  5500 CUP
+nauticos azules  5500 CUP  hombre
 
-zandalias crucetas  3000 CUP
+zandalias crucetas  3000 CUP  mujer
 
-nauticos marrones  5500 CUP
+nauticos marrones  5500 CUP  hombre
 
-zandalias doble listas  2500 CUP
+zandalias doble listas  2500 CUP  mujer
 
-practicas doble tono  3000 CUP
+practicas doble tono  3000 CUP  mujer
 
-zandalias horcadas  2500 CUP
+zandalias horcadas  2500 CUP  mujer
 
-Sandalia 3 listas  2500 CUP
+Sandalia 3 listas  2500 CUP  mujer
 
-mocazines  4000 CUP
+mocazines  4000 CUP  hombre
 
-botas de mujer  5500 CUP
+botas de mujer  5500 CUP  mujer
 
-zandalias cerradas de tacon  4500 CUP
+zandalias cerradas de tacon  4500 CUP  mujer
 
 
