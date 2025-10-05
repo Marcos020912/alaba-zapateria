@@ -1,0 +1,27 @@
+# Archivos temporales
+*.tmp
+*.temp
+.DS_Store
+Thumbs.db
+
+# Archivos de sistema
+node_modules/
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Archivos de logs
+*.log
+logs/
+
+# Archivos de compilación
+/dist/
+/build/
+/target/
+*.out
+
+# Archivos sensibles
+.env
+config.json
+secrets.json

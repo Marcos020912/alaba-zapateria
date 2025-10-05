@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - ALABA</title>
+    <link rel="stylesheet" href="../Estilos/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo-container">
+            <a href="../index.html">
+                <img src="../assets/iconos/logo.png" alt="Logo ALABA" class="logo">
+            </a>
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="contactanos.html" class="active">Contáctanos</a></li>
+            </ul>
+        </nav>
+        
+        <div class="wishlist-container">
+            <a href="../index.html#featured-products" class="wishlist-link">
+                <span class="wishlist-icon">⭐</span>
+                <span class="wishlist-text">Destacados</span>
+            </a>
+        </div>
+    </header>
+    
+    <!-- Main Content -->
+    <main>
+        <section class="hero">
+            <h1>Contáctanos</h1>
+            <p>¿Tienes alguna pregunta? Estamos aquí para ayudarte.</p>
+        </section>
+        
+        <section class="contact-info">
+            <div class="container">
+                <div class="contact-content">
+                    <h2>Conéctate con ALABA</h2>
+                    <p>Encuéntranos en nuestras redes sociales y mantente al día con nuestras novedades</p>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-link">Instagram</a>
+                        <a href="#" class="social-link">Facebook</a>
+                        <a href="https://www.youtube.com/@Alaba-b2j" target="_blank" class="social-link">YouTube</a>
+                    </div>
+                    
+                    <h3>Envíanos un mensaje por WhatsApp</h3>
+                    <form class="whatsapp-form" id="whatsappForm">
+                        <textarea id="mensaje" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                        <button type="submit" class="whatsapp-button">Enviar por WhatsApp</button>
+                    </form>
+                    
+                    <div class="contact-details">
+                        <h3>Otros Medios de Contacto</h3>
+                        <p>📧 <a href="mailto:zapatosalaba@gmail.com">zapatosalaba@gmail.com</a></p>
+                        <p>📞 <span>+53 50254640</span></p>
+                        <p>📍 <span>Dirección de la tienda</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 ALABA - Todos los derechos reservados</p>
+    </footer>
+    
+    <script>
+        document.getElementById('whatsappForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const mensaje = encodeURIComponent(document.getElementById('mensaje').value);
+            // Reemplaza 'TU_NUMERO_DE_WHATSAPP' con el número real de WhatsApp
+            const whatsappUrl = `https://wa.me/5350254640?text=${mensaje}`;
+            
+            window.open(whatsappUrl, '_blank');
+        });
+    </script>
+</body>
+</html>
