@@ -109,7 +109,7 @@ main {
 
 .artisan-info {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   gap: 2rem;
   margin-top: 2rem;
@@ -117,12 +117,13 @@ main {
 }
 
 .artisan-image {
-  width: 200px;
+  width: 150px;
   height: 200px;
-  border-radius: 50%;
   object-fit: cover;
+  object-position: top;
   border: 5px solid #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
 }
 
 .artisan-details h3 {
