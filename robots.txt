@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://tu-dominio.com/sitemap.xml
+Sitemap: https://marcos020912.github.io/alaba-zapateria/sitemap.xml
 # Reemplaza "tu-dominio.com" con tu dominio real al subir al servidor
