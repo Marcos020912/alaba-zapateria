@@ -4,15 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catálogo - ALABA</title>
+    <title>Catálogo - ALABA | Calzado Artesanal</title>
+    <meta name="description" content="Explora nuestro catálogo completo de calzado artesanal: sandalias, abarcas, náuticos y más para hombre y mujer.">
+    <meta name="keywords" content="catálogo calzado, calzado artesanal, sandalias, abarcas, náuticos, ALABA">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Catálogo - ALABA">
+    <meta property="og:description" content="Explora nuestra colección de calzado artesanal.">
+    <meta property="og:image" content="https://tu-dominio.com/assets/iconos/logo.webp">
+    <meta property="og:url" content="https://tu-dominio.com/paginas/catalogo.html">
+    
+    <link rel="canonical" href="https://tu-dominio.com/paginas/catalogo.html">
     <link rel="stylesheet" href="../Estilos/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
 </head>
 
 <body>
     <header>
         <div class="logo-container">
             <a href="../index.html">
-                <img src="../assets/iconos/logo.png" alt="Logo ALABA" class="logo">
+                <img src="../assets/iconos/logo.webp" alt="Logo ALABA" class="logo">
             </a>
         </div>
 
@@ -39,140 +53,190 @@
                 <button class="filter-btn" data-filter="hombre">Hombre</button>
             </div>
 
-            <div class="product-grid">
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Buscar por nombre..." class="search-input">
+                <div class="price-filter">
+                    <input type="number" id="min-price" placeholder="Precio mín" class="price-input">
+                    <input type="number" id="max-price" placeholder="Precio máx" class="price-input">
+                    <button id="clear-filters" class="clear-btn">Limpiar</button>
+                </div>
+                <button id="export-pdf" class="export-btn">Exportar a PDF</button>
+            </div>
 
-                <div class="product-card" data-sexo="mujer">
-                    <img src="../assets/productos/abarcas blancas.png" alt="Abarcas Blancas" class="product-image">
+            <div class="product-grid" id="product-grid">
+
+                <div class="product-card" data-sexo="mujer" data-price="2500">
+                    <img loading="lazy" src="../assets/productos/abarcas blancas.webp" alt="Abarcas Blancas" class="product-image">
                     <h3 class="product-name">Abarcas Blancas</h3>
                     <p class="product-price">2500 CUP</p>
                     <a href="https://wa.me/5350254640?text=Hola,%20estoy%20interesado%20en%20el%20producto%20Abarcas%20Blancas"
                         target="_blank" class="whatsapp-product-btn">
-                        <img src="../assets/iconos/whatsapp-logo.png" alt="WhatsApp"> Comprar
+                        <img src="../assets/iconos/whatsapp-logo.webp" alt="WhatsApp"> Comprar
                     </a>
                 </div>
 
-                <div class="product-card" data-sexo="mujer">
-                    <img src="../assets/productos/sandalias doble evilla.png" alt="Sandalias Doble Hebilla"
+                <div class="product-card" data-sexo="mujer" data-price="2500">
+                    <img loading="lazy" src="../assets/productos/sandalias doble evilla.webp" alt="Sandalias Doble Hebilla"
                         class="product-image">
                     <h3 class="product-name">Sandalias Doble Hebilla</h3>
                     <p class="product-price">2500 CUP</p>
                     <a href="https://wa.me/5350254640?text=Hola,%20estoy%20interesado%20en%20el%20producto%20Sandalias%20Doble%20Hebilla"
                         target="_blank" class="whatsapp-product-btn">
-                        <img src="../assets/iconos/whatsapp-logo.png" alt="WhatsApp"> Comprar
+                        <img src="../assets/iconos/whatsapp-logo.webp" alt="WhatsApp"> Comprar
                     </a>
                 </div>
 
-                <div class="product-card" data-sexo="mujer">
-                    <img src="../assets/productos/abarcas negra.png" alt="Abarcas Negras" class="product-image">
+                <div class="product-card" data-sexo="mujer" data-price="2500">
+                    <img loading="lazy" src="../assets/productos/abarcas negra.webp" alt="Abarcas Negras" class="product-image">
                     <h3 class="product-name">Abarcas Negras</h3>
                     <p class="product-price">2500 CUP</p>
                     <a href="https://wa.me/5350254640?text=Hola,%20estoy%20interesado%20en%20el%20producto%20Abarcas%20Negras"
                         target="_blank" class="whatsapp-product-btn">
-                        <img src="../assets/iconos/whatsapp-logo.png" alt="WhatsApp"> Comprar
+                        <img src="../assets/iconos/whatsapp-logo.webp" alt="WhatsApp"> Comprar
                     </a>
                 </div>
 
-                <div class="product-card" data-sexo="mujer">
-                    <img src="../assets/productos/zandalia talonada.png" alt="Zandalia Talonada" class="product-image">
+                <div class="product-card" data-sexo="mujer" data-price="3000">
+                    <img loading="lazy" src="../assets/productos/zandalia talonada.webp" alt="Zandalia Talonada" class="product-image">
                     <h3 class="product-name">Zandalia Talonada</h3>
                     <p class="product-price">3000 CUP</p>
                     <a href="https://wa.me/5350254640?text=Hola,%20estoy%20interesado%20en%20el%20producto%20Zandalia%20Talonada"
                         target="_blank" class="whatsapp-product-btn">
-                        <img src="../assets/iconos/whatsapp-logo.png" alt="WhatsApp"> Comprar
+                        <img src="../assets/iconos/whatsapp-logo.webp" alt="WhatsApp"> Comprar
                     </a>
                 </div>
 
-                <div class="product-card" data-sexo="hombre">
-                    <img src="../assets/productos/nauticos azules.png" alt="Náuticos Azules" class="product-image">
+                <div class="product-card" data-sexo="hombre" data-price="5500">
+                    <img loading="lazy" src="../assets/productos/nauticos azules.webp" alt="Náuticos Azules" class="product-image">
                     <h3 class="product-name">Náuticos Azules</h3>
                     <p class="product-price">5500 CUP</p>
                     <a href="https://wa.me/5350254640?text=Hola,%20estoy%20interesado%20en%20el%20producto%20Náuticos%20Azules"
                         target="_blank" class="whatsapp-product-btn">
-                        <img src="../assets/iconos/whatsapp-logo.png" alt="WhatsApp"> Comprar
+                        <img src="../assets/iconos/whatsapp-logo.webp" alt="WhatsApp"> Comprar
                     </a>
                 </div>
 
-                <div class="product-card" data-sexo="mujer">
-                    <img src="../assets/productos/zandalias crucetas.png" alt="Zandalias Crucetas"
+                <div class="product-card" data-sexo="mujer" data-price="3000">
+                    <img loading="lazy" src="../assets/productos/zandalias crucetas.webp" alt="Zandalias Crucetas"
                         class="product-image">
                     <h3 class="product-name">Zandalias Crucetas</h3>
                     <p class="product-price">3000 CUP</p>
                     <a href="https://wa.me/5350254640?text=Hola,%20estoy%20interesado%20en%20el%20producto%20Zandalias%20Crucetas"
                         target="_blank" class="whatsapp-product-btn">
-                        <img src="../assets/iconos/whatsapp-logo.png" alt="WhatsApp"> Comprar
+                        <img src="../assets/iconos/whatsapp-logo.webp" alt="WhatsApp"> Comprar
                     </a>
                 </div>
 
-                <div class="product-card" data-sexo="hombre">
-                    <img src="../assets/productos/nauticos marrones.png" alt="Náuticos Marrones" class="product-image">
+                <div class="product-card" data-sexo="hombre" data-price="5500">
+                    <img loading="lazy" src="../assets/productos/nauticos marrones.webp" alt="Náuticos Marrones" class="product-image">
                     <h3 class="product-name">Náuticos Marrones</h3>
                     <p class="product-price">5500 CUP</p>
                     <a href="https://wa.me/5350254640?text=Hola,%20estoy%20interesado%20en%20el%20producto%20Náuticos%20Marrones"
                         target="_blank" class="whatsapp-product-btn">
-                        <img src="../assets/iconos/whatsapp-logo.png" alt="WhatsApp"> Comprar
+                        <img src="../assets/iconos/whatsapp-logo.webp" alt="WhatsApp"> Comprar
                     </a>
                 </div>
 
-                <div class="product-card" data-sexo="mujer">
-                    <img src="../assets/productos/zandalias doble listas.png" alt="Zandalias Doble Listas"
+                <div class="product-card" data-sexo="mujer" data-price="2500">
+                    <img loading="lazy" src="../assets/productos/zandalias doble listas.webp" alt="Zandalias Doble Listas"
                         class="product-image">
                     <h3 class="product-name">Zandalias Doble Listas</h3>
                     <p class="product-price">2500 CUP</p>
                     <a href="https://wa.me/5350254640?text=Hola,%20estoy%20interesado%20en%20el%20producto%20Zandalias%20Doble%20Listas"
                         target="_blank" class="whatsapp-product-btn">
-                        <img src="../assets/iconos/whatsapp-logo.png" alt="WhatsApp"> Comprar
+                        <img src="../assets/iconos/whatsapp-logo.webp" alt="WhatsApp"> Comprar
                     </a>
                 </div>
 
-                <div class="product-card" data-sexo="mujer">
-                    <img src="../assets/productos/practicas doble tono.png" alt="Prácticas Doble Tono"
+                <div class="product-card" data-sexo="mujer" data-price="3000">
+                    <img loading="lazy" src="../assets/productos/practicas doble tono.webp" alt="Prácticas Doble Tono"
                         class="product-image">
                     <h3 class="product-name">Prácticas Doble Tono</h3>
                     <p class="product-price">3000 CUP</p>
                     <a href="https://wa.me/5350254640?text=Hola,%20estoy%20interesado%20en%20el%20producto%20Prácticas%20Doble%20Tono"
                         target="_blank" class="whatsapp-product-btn">
-                        <img src="../assets/iconos/whatsapp-logo.png" alt="WhatsApp"> Comprar
+                        <img src="../assets/iconos/whatsapp-logo.webp" alt="WhatsApp"> Comprar
                     </a>
                 </div>
 
-                <div class="product-card" data-sexo="mujer">
-                    <img src="../assets/productos/zandalias horcadas.png" alt="Zandalias Horcadas"
+                <div class="product-card" data-sexo="mujer" data-price="2500">
+                    <img loading="lazy" src="../assets/productos/zandalias horcadas.webp" alt="Zandalias Horcadas"
                         class="product-image">
                     <h3 class="product-name">Zandalias Horcadas</h3>
                     <p class="product-price">2500 CUP</p>
                     <a href="https://wa.me/5350254640?text=Hola,%20estoy%20interesado%20en%20el%20producto%20Zandalias%20Horcadas"
                         target="_blank" class="whatsapp-product-btn">
-                        <img src="../assets/iconos/whatsapp-logo.png" alt="WhatsApp"> Comprar
+                        <img src="../assets/iconos/whatsapp-logo.webp" alt="WhatsApp"> Comprar
                     </a>
                 </div>
 
-                <div class="product-card" data-sexo="mujer">
-                    <img src="../assets/productos/Sandalia 3 listas.png" alt="Sandalia 3 Listas" class="product-image">
+                <div class="product-card" data-sexo="mujer" data-price="2500">
+                    <img loading="lazy" src="../assets/productos/Sandalia 3 listas.webp" alt="Sandalia 3 Listas" class="product-image">
                     <h3 class="product-name">Sandalia 3 Listas</h3>
                     <p class="product-price">2500 CUP</p>
                     <a href="https://wa.me/5350254640?text=Hola,%20estoy%20interesado%20en%20el%20producto%20Sandalia%203%20Listas"
                         target="_blank" class="whatsapp-product-btn">
-                        <img src="../assets/iconos/whatsapp-logo.png" alt="WhatsApp"> Comprar
+                        <img src="../assets/iconos/whatsapp-logo.webp" alt="WhatsApp"> Comprar
                     </a>
                 </div>
 
-                <div class="product-card" data-sexo="hombre">
-                    <img src="../assets/productos/mocazines.png" alt="Mocazines" class="product-image">
+                <div class="product-card" data-sexo="hombre" data-price="4000">
+                    <img loading="lazy" src="../assets/productos/mocazines.webp" alt="Mocazines" class="product-image">
                     <h3 class="product-name">Mocazines</h3>
                     <p class="product-price">4000 CUP</p>
                     <a href="https://wa.me/5350254640?text=Hola,%20estoy%20interesado%20en%20el%20producto%20Mocazines"
                         target="_blank" class="whatsapp-product-btn">
-                        <img src="../assets/iconos/whatsapp-logo.png" alt="WhatsApp"> Comprar
+                        <img src="../assets/iconos/whatsapp-logo.webp" alt="WhatsApp"> Comprar
                     </a>
                 </div>
 
-                <div class="product-card" data-sexo="mujer">
-                    <img src="../assets/productos/botas de mujer.png" alt="Botas de Mujer" class="product-image">
+                <div class="product-card" data-sexo="mujer" data-price="5500">
+                    <img loading="lazy" src="../assets/productos/botas de mujer.webp" alt="Botas de Mujer" class="product-image">
                     <h3 class="product-name">Botas de Mujer</h3>
                     <p class="product-price">5500 CUP</p>
                     <a href="https://wa.me/5350254640?text=Hola,%20estoy%20interesado%20en%20el%20producto%20Botas%20de%20Mujer"
                         target="_blank" class="whatsapp-product-btn">
-                        <img src="../assets/iconos/whatsapp-logo.png" alt="WhatsApp"> Comprar
+                        <img src="../assets/iconos/whatsapp-logo.webp" alt="WhatsApp"> Comprar
+                    </a>
+                </div>
+
+                <div class="product-card" data-sexo="mujer" data-price="3000">
+                    <img loading="lazy" src="../assets/productos/Sandalia 2 hebillas.webp" alt="Sandalia 2 Hebillas" class="product-image">
+                    <h3 class="product-name">Sandalia 2 Hebillas</h3>
+                    <p class="product-price">3000 CUP</p>
+                    <a href="https://wa.me/5350254640?text=Hola,%20estoy%20interesado%20en%20el%20producto%20Sandalia%202%20Hebillas"
+                        target="_blank" class="whatsapp-product-btn">
+                        <img src="../assets/iconos/whatsapp-logo.webp" alt="WhatsApp"> Comprar
+                    </a>
+                </div>
+
+                <div class="product-card" data-sexo="mujer" data-price="2000">
+                    <img loading="lazy" src="../assets/productos/sandalias rojas.webp" alt="Sandalias Rojas" class="product-image">
+                    <h3 class="product-name">Sandalias Rojas</h3>
+                    <p class="product-price">2000 CUP</p>
+                    <a href="https://wa.me/5350254640?text=Hola,%20estoy%20interesado%20en%20el%20producto%20Sandalias%20Rojas"
+                        target="_blank" class="whatsapp-product-btn">
+                        <img src="../assets/iconos/whatsapp-logo.webp" alt="WhatsApp"> Comprar
+                    </a>
+                </div>
+
+                <div class="product-card" data-sexo="mujer" data-price="3500">
+                    <img loading="lazy" src="../assets/productos/suecos tejidos bige.webp" alt="Suecos Tejidos Bige" class="product-image">
+                    <h3 class="product-name">Suecos Tejidos Beige</h3>
+                    <p class="product-price">3500 CUP</p>
+                    <a href="https://wa.me/5350254640?text=Hola,%20estoy%20interesado%20en%20el%20producto%20Suecros%20Tejidos%20Bige"
+                        target="_blank" class="whatsapp-product-btn">
+                        <img src="../assets/iconos/whatsapp-logo.webp" alt="WhatsApp"> Comprar
+                    </a>
+                </div>
+
+                <div class="product-card" data-sexo="mujer" data-price="4500">
+                    <img loading="lazy" src="../assets/productos/suecos tejidos negros.webp" alt="Suecos Tejidos Negros" class="product-image">
+                    <h3 class="product-name">Suecos Tejidos Negros</h3>
+                    <p class="product-price">4500 CUP</p>
+                    <a href="https://wa.me/5350254640?text=Hola,%20estoy%20interesado%20en%20el%20producto%20Suecos%20Tejidos%20de%20Negros"
+                        target="_blank" class="whatsapp-product-btn">
+                        <img src="../assets/iconos/whatsapp-logo.webp" alt="WhatsApp"> Comprar
                     </a>
                 </div>
 
@@ -188,26 +252,151 @@
         document.addEventListener('DOMContentLoaded', () => {
             const filterButtons = document.querySelectorAll('.filter-btn');
             const productCards = document.querySelectorAll('.product-card');
+            const searchInput = document.getElementById('search-input');
+            const minPriceInput = document.getElementById('min-price');
+            const maxPriceInput = document.getElementById('max-price');
+            const clearButton = document.getElementById('clear-filters');
+            const exportButton = document.getElementById('export-pdf');
+
+            let currentFilter = 'all';
+
+            function filterProducts() {
+                const searchTerm = searchInput.value.toLowerCase();
+                const minPrice = parseInt(minPriceInput.value) || 0;
+                const maxPrice = parseInt(maxPriceInput.value) || Infinity;
+
+                productCards.forEach(card => {
+                    const sexo = card.getAttribute('data-sexo');
+                    const price = parseInt(card.getAttribute('data-price'));
+                    const name = card.querySelector('.product-name').textContent.toLowerCase();
+
+                    const matchesGender = currentFilter === 'all' || currentFilter === sexo;
+                    const matchesSearch = name.includes(searchTerm);
+                    const matchesPrice = price >= minPrice && price <= maxPrice;
+
+                    if (matchesGender && matchesSearch && matchesPrice) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            }
 
             filterButtons.forEach(button => {
                 button.addEventListener('click', () => {
-                    // Manejar la clase 'active' en los botones
                     filterButtons.forEach(btn => btn.classList.remove('active'));
                     button.classList.add('active');
-
-                    const filter = button.getAttribute('data-filter');
-
-                    // Filtrar productos
-                    productCards.forEach(card => {
-                        const sexo = card.getAttribute('data-sexo');
-                        if (filter === 'all' || filter === sexo) {
-                            card.style.display = 'block';
-                        } else {
-                            card.style.display = 'none';
-                        }
-                    });
+                    currentFilter = button.getAttribute('data-filter');
+                    filterProducts();
                 });
             });
+
+            searchInput.addEventListener('input', filterProducts);
+            minPriceInput.addEventListener('input', filterProducts);
+            maxPriceInput.addEventListener('input', filterProducts);
+
+            clearButton.addEventListener('click', () => {
+                searchInput.value = '';
+                minPriceInput.value = '';
+                maxPriceInput.value = '';
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                filterButtons[0].classList.add('active');
+                currentFilter = 'all';
+                filterProducts();
+            });
+
+            exportButton.addEventListener('click', async () => {
+                const { jsPDF } = window.jspdf;
+                const doc = new jsPDF('p', 'mm', 'a4');
+                
+                const pageWidth = 210;
+                const pageHeight = 297;
+                const margin = 10;
+                const cols = 3;
+                const rows = 3;
+                const productsPerPage = cols * rows;
+                
+                const cellWidth = (pageWidth - margin * 2) / cols;
+                const cellHeight = (pageHeight - 40) / rows;
+                
+                const visibleProducts = Array.from(productCards).filter(card => card.style.display !== 'none');
+                
+                for (let i = 0; i < visibleProducts.length; i += productsPerPage) {
+                    if (i > 0) doc.addPage();
+                    
+                    doc.setFontSize(16);
+                    doc.text('Catalogo ALABA', pageWidth / 2, 15, { align: 'center' });
+                    doc.setFontSize(10);
+                    doc.text('Pagina ' + (Math.floor(i / productsPerPage) + 1), pageWidth - margin, 15, { align: 'right' });
+                    
+                    const pageProducts = visibleProducts.slice(i, i + productsPerPage);
+                    
+                    for (let j = 0; j < pageProducts.length; j++) {
+                        const product = pageProducts[j];
+                        const row = Math.floor(j / cols);
+                        const col = j % cols;
+                        
+                        const x = margin + col * cellWidth;
+                        const y = 25 + row * cellHeight;
+                        
+                        const img = product.querySelector('.product-image');
+                        const name = product.querySelector('.product-name').textContent;
+                        const price = product.querySelector('.product-price').textContent;
+                        
+                        const maxImgWidth = cellWidth - 10;
+                        const maxImgHeight = cellHeight - 25;
+                        
+                        try {
+                            const imgData = await loadImageAsBase64(img.src);
+                            const props = doc.getImageProperties(imgData);
+                            const aspectRatio = props.width / props.height;
+                            
+                            let finalWidth, finalHeight;
+                            if (aspectRatio > maxImgWidth / maxImgHeight) {
+                                finalWidth = maxImgWidth;
+                                finalHeight = maxImgWidth / aspectRatio;
+                            } else {
+                                finalHeight = maxImgHeight;
+                                finalWidth = maxImgHeight * aspectRatio;
+                            }
+                            
+                            const imgX = x + (cellWidth - finalWidth) / 2;
+                            const imgY = y + (cellHeight - 25 - finalHeight) / 2;
+                            
+                            doc.addImage(imgData, 'PNG', imgX, imgY, finalWidth, finalHeight);
+                        } catch (e) {
+                            console.error('Error loading image:', e);
+                        }
+                        
+                        doc.setFontSize(9);
+                        doc.text(name, x + cellWidth / 2, y + cellHeight - 15, { align: 'center', maxWidth: cellWidth - 5 });
+                        doc.setTextColor(255, 215, 0);
+                        doc.text(price, x + cellWidth / 2, y + cellHeight - 8, { align: 'center' });
+                        doc.setTextColor(0, 0, 0);
+                        
+                        doc.rect(x + 2, y + 2, cellWidth - 4, cellHeight - 4);
+                    }
+                }
+                
+                doc.save('catalogo-alaba.pdf');
+            });
+            
+            function loadImageAsBase64(url) {
+                return new Promise((resolve, reject) => {
+                    const xhr = new XMLHttpRequest();
+                    xhr.open('GET', url, true);
+                    xhr.responseType = 'blob';
+                    xhr.onload = function() {
+                        const reader = new FileReader();
+                        reader.onloadend = function() {
+                            resolve(reader.result);
+                        };
+                        reader.readAsDataURL(xhr.response);
+                    };
+                    xhr.onerror = reject;
+                    xhr.send();
+                });
+            }
         });
     </script>
 
