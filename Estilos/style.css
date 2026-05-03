@@ -116,15 +116,26 @@ main {
   text-align: left;
 }
 
+/* Estilos base de la imagen (Escritorio y Móvil) */
 .artisan-image {
-  width: 150px;
-  height: 200px;
+  width: 180px;
+  height: 240px;
   object-fit: cover;
-  object-position: top;
+  object-position: center 35%; /* Ajuste para mostrar torso/rodillas arriba */
   border: 5px solid #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  border-radius: 15px;
+  display: block; /* Necesario para centrar con margin auto */
+  margin: 0 auto; /* Centra la imagen horizontalmente */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 100px;
 }
+
+.artisan-image:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
 
 .artisan-details h3 {
   font-size: 1.6rem;
@@ -399,13 +410,20 @@ footer {
 
   /* Responsive para la sección de historia */
   .artisan-info {
-    flex-direction: column;
-    text-align: center;
+    display: flex;
+    flex-direction: column; /* Apila la imagen y el texto verticalmente */
+    align-items: center;    /* Centra todo el contenido horizontalmente */
+    text-align: center;     /* Centra el texto */
   }
 
   .artisan-image {
+    margin-bottom: 20px; /* Espacio entre la imagen y el texto */
+    /* Opcional: Ajustar tamaño para que no ocupe tanto en móvil */
     width: 150px;
-    height: 150px;
+    height: 200px;
+    object-fit: cover;
+    object-position: center 0%;
+    border-radius: 100px;
   }
 
   /* Responsive para los pilares */
